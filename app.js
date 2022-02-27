@@ -1,3 +1,8 @@
+Array.prototype.choice = function() {
+    var i = Math.floor(Math.random() * this.length);
+    return this[i];
+}
+
 const h1 = document.getElementById('trashgoeshere');
 
 note = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
@@ -7,12 +12,20 @@ seventh = ['maj7', 'min7']
 sussybois = ['sus2', 'sus4']
 inv = ['a', 'b', 'c', 'd']
 
-n = note[Math.floor(Math.random()*note.length)]
-tf = thirdfifth[Math.floor(Math.random()*thirdfifth.length)]
-sev = seventh[Math.floor(Math.random()*seventh.length)]
-sus = sussybois[Math.floor(Math.random()*sussybois.length)]
-invert = inv[Math.floor(Math.random()*inv.length)]
-acc = accidental[Math.floor(Math.random()*accidental.length)]
+// n = note[Math.floor(Math.random()*note.length)]
+// tf = thirdfifth[Math.floor(Math.random()*thirdfifth.length)]
+// sev = seventh[Math.floor(Math.random()*seventh.length)]
+// sus = sussybois[Math.floor(Math.random()*sussybois.length)]
+// invert = inv[Math.floor(Math.random()*inv.length)]
+// acc = accidental[Math.floor(Math.random()*accidental.length)]
+
+n = note.choice()
+tf = thirdfifth.choice()
+sev = seventh.choice()
+sus = sussybois.choice()
+invert = inv.choice()
+acc = accidental.choice()
+
 
 // console.log(n+tf+invert);
 coinflip = Math.floor(Math.random()*3);
